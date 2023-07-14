@@ -14,5 +14,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - run: bun install
-      - run: bun start
+        name: install cowsay
+      - run: bun add --global cowsay
+        name: run cowsay
+      - run: cowsay "hello world"
